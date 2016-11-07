@@ -1,6 +1,6 @@
 # Guice Play
 
-A quick play around with the DI Guice.
+A quick play around with the DI library Guice.
 
 Contains examples for:
 
