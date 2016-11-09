@@ -5,7 +5,7 @@ import com.google.inject.Inject;
 /**
  * Created by mathew on 07/11/2016.
  */
-public class SimpleClass implements SimpleInterface {
+public class SimpleClass {
 
     @Inject
     public SimpleClass() {}

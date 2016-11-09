@@ -20,6 +20,10 @@ public class Main {
     }
 
     private static void simpleExample() {
+        /*
+        Demonstrate a class doesn't need bound to an interface to be used.
+        Defining an empty module is best practice to avoid future wiring-up.
+         */
         System.out.println("Simple Example:");
         Injector injector = Guice.createInjector(new SimpleModule());
         SimpleClass simple = injector.getInstance(SimpleClass.class);
@@ -27,6 +31,7 @@ public class Main {
     }
 
     private static void namedExample() {
+        // Demonstrate the possible use of @Named for config.
         System.out.println("\nNamed Example:");
         Injector injector = Guice.createInjector(new NamedModule());
         NamedClass named = injector.getInstance(NamedClass.class);
@@ -34,6 +39,7 @@ public class Main {
     }
 
     private static void multipleExample() {
+        // Demonstrate creating an injector with multiple modules.
         System.out.println("\nMultiple Example:");
         Injector injector = Guice.createInjector(
             new SimpleModule(),
@@ -47,6 +53,10 @@ public class Main {
     }
 
     private static void nestedExample() {
+        /*
+        Demonstrate using the module definition to install multiple modules.
+        Also shows multiple layers of injection.
+         */
         System.out.println("\nNested Example:");
         Injector injector = Guice.createInjector(new NestedModule());
         NestedClass nested = injector.getInstance(NestedClass.class);

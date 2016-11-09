@@ -8,7 +8,5 @@ import com.google.inject.AbstractModule;
 public class SimpleModule extends AbstractModule{
 
     @Override
-    protected void configure() {
-        bind(SimpleInterface.class).to(SimpleClass.class);
-    }
+    protected void configure() {}
 }
